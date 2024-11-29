@@ -1,0 +1,52 @@
+[Settings]
+Priority= Default,DefaultGateway
+Properties=MyCustomProperty 
+
+;Logging
+SLShare=\\STUD-WDS\DeploymentShare$\Logs
+SLShareDynamicLogging =\\<MDT-SERVER-IP>\DeploymentShare$\Logs\%ComputerName%
+
+[Default]
+_SMSTSORGNAME=%OSDComputerName% to be installed...
+OSInstall=Y
+UserDataLocation=NONE
+
+SkipTimeZone=YES
+TimeZoneName=Central European Summer Time
+
+AdminPassword=<PASSWORD>
+NetworkLocation=Work
+
+HideShell=YES
+DriverSelectionProfile=Nothing
+DriverInjectionMode=ALL
+ 
+
+SkipAppsOnUpgrade=NO
+SkipAdminPassword=YES
+SkipProductKey=YES
+SkipComputerName=NO
+SkipDomainMembership=YES
+SkipUserData=YES
+SkipLocaleSelection=YES
+UILanguage=en-US
+UserLocale=en-US
+SkipTaskSequence=YES
+TaskSequenceID=W10
+SkipTimeZone=YES
+SkipApplications=YES
+SkipBitLocker=YES
+SkipSummary=YES
+SkipCapture=YES
+SkipRoles=YES
+SkipFinalSummary=YES
+
+FinishAction=REBOOT
+EventService=http://<MDT-SERVER-IP>:9800
+
+;JoinDomain=<DOMAIN-NAME>
+;DomainAdmin=<ADMIN>
+;DomainAdminDomain=<DOMAIN-NAME>
+;DomainAdminPassword=<PASSWORD>
+;MachineObjectOU=OU=StudentComputers,DC=E-ICT.,DC=local
+Joinworkgroup=e-ict

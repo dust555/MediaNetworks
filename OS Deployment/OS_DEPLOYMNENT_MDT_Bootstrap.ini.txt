@@ -1,0 +1,12 @@
+[Settings]
+Priority=Default
+
+[Default]
+DeployRoot=\\<MDT-SERVER-IP>\DeploymentShare$
+UserID=<ADMIN>
+UserDomain=<DOMAIN>
+UserPassword=<PASSWORD>
+
+KeyboardLocale=en-US
+
+SkipBDDWelcome=YES
